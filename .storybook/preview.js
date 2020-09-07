@@ -1,14 +1,19 @@
-
 // use element-ui
-import Vue from 'vue'
-import ElementUI from 'element-ui';
+import Vue from "vue";
+import ElementUI from "element-ui";
+import { ThemeProvider } from "styled-components";
 Vue.use(ElementUI);
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   options: {
-    storySort: (a, b) =>
-      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
+    // storySort: (a, b) =>
+    //   a[1].kind === b[1].kind
+    //     ? 0
+    //     : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
+    storySort:{
+      order: ['Intro', 'Pages', ['Home', 'Login', 'Admin'], 'Components']
+    }
   },
   // backgrounds: {
   //   default: "twitter",
@@ -23,7 +28,7 @@ export const parameters = {
   //     },
   //   ],
   // } // 默认情况下，背景工具栏为您提供浅色和深色背景。
-}
+};
 
 export const globalTypes = {
   // theme: {
@@ -52,3 +57,14 @@ export const globalTypes = {
   //   },
   // },  // 本地格式化
 };
+/**
+ * 一些库要求组件层次结构中较高的组件才能正确呈现。
+ * 例如，在样式化组件中，如果您的组件使用主题，则需要ThemeProvider。 添加一个全局装饰器，以将该上下文添加到以下所有故事中
+ */
+// export const decorators = [
+//   (Story) => (
+//     <ThemeProvider theme="default">
+//       <Story />
+//     </ThemeProvider>
+//   ),
+// ];

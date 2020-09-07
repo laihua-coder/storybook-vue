@@ -43,6 +43,22 @@ module.exports = ({ config }) => {
     enforce: 'post',
   })
 
+  rules.push({
+    test: /\.stories\.(js|jsx)?$/,
+    loaders: [
+      {
+        loader: require.resolve('@storybook/source-loader'),
+        options: {
+          prettierConfig: {
+            printWidth: 100,
+            singleQuote: false,
+          },
+        },
+      },
+    ],
+    enforce: 'pre',
+  });
+
   config.resolve.alias = {
     ...config.resolve.alias,
     '@': path.resolve(__dirname, '../src')

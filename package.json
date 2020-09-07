@@ -9,7 +9,8 @@
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s .storybook/public",
+    "storybook-docs": "start-storybook --docs",
     "build-storybook": "build-storybook"
   },
   "keywords": [],
@@ -22,7 +23,9 @@
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-knobs": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
+    "@storybook/addon-storysource": "^6.0.21",
     "@storybook/addons": "^6.0.21",
+    "@storybook/source-loader": "^6.0.21",
     "@storybook/vue": "^6.0.21",
     "@vue/cli-plugin-babel": "^4.5.0",
     "@vue/cli-plugin-eslint": "^4.5.0",
@@ -43,6 +46,7 @@
     "node-sass": "^4.12.0",
     "react-is": "^16.13.1",
     "sass-loader": "^8.0.2",
+    "styled-components": "^5.2.0",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12"
   },
