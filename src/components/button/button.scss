@@ -1,0 +1,66 @@
+$baseColor: #2f58fe;
+$hoverColor: #3d7dff;
+$errorColor: #f21616;
+$errorHoverColor: #f54646;
+.bench-btn {
+  display: inline-block;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  &.el-button--primary {
+    background-color: $baseColor;
+    border-color: $baseColor;
+    border-radius: 4px;
+    &:focus,
+    &:hover {
+      color: #fff;
+      background-color: $hoverColor;
+      border-color: $hoverColor;
+    }
+    &.btn-danger {
+      background-color: $errorColor;
+      border-color: $errorColor;
+      &:focus,
+      &:hover {
+        color: #fff;
+        background-color: $errorHoverColor;
+        border-color: $errorHoverColor;
+      }
+    }
+    &.btn-plain {
+      color: #343434;
+      background-color: #fff;
+      border-color: #d6d6d6;
+      &:focus,
+      &:hover {
+        color: #343434;
+        border-color: #343434;
+      }
+    }
+    &.btn-pink {
+      color: #fff;
+      background-color: #ff8b91;
+      border-color: #ff8b91;
+      &:focus,
+      &:hover {
+        background-color: #ff656d;
+        border-color: #ff656d;
+      }
+    }
+    &.is-disabled {
+      color: #ffffff;
+      border-color: #d6d6d6;
+      background-color: #d6d6d6;
+      &:focus,
+      &:hover {
+        color: #ffffff;
+        border-color: #d6d6d6;
+        background-color: #d6d6d6;
+      }
+    }
+  }
+  &.el-button + &.el-button {
+    margin-left: 11px;
+  }
+}

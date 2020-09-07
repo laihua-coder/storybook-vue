@@ -43,47 +43,6 @@ module.exports = ({ config }) => {
     enforce: 'post',
   })
 
-  // rules.push({
-  //   test: /\.js$/,
-  //   resourceQuery: /component/,
-  //   loader: 'vue-docgen-loader',
-  //   enforce: 'post',
-  // })
-
-  // rules.push({
-  //   test: /\.stories\.js$/,
-  //   loaders: [require.resolve('@storybook/addon-storysource/loader')],
-  //   enforce: 'pre',
-  // })
-
-  // const mdxRules = rules.filter(
-  //   filterRules([/\.mdx$/, /\.(stories|story).mdx$/]),
-  // )
-  // mdxRules.forEach(mdxRule => {
-  //   const [babelLoader] = mdxRule.use.filter(({ loader }) =>
-  //     loader.includes('babel-loader'),
-  //   )
-  //   babelLoader.options.presets = babelLoader.options.presets.filter(
-  //     preset => !preset.includes('babel-preset-vue'),
-  //   )
-  // })
-
-  // const [jsxRule] = rules.filter(filterRules([/\.(mjs|jsx?)$/]))
-  // const [babelLoader] = jsxRule.use.filter(({ loader }) =>
-  //   loader.includes('babel-loader'),
-  // )
-  // babelLoader.options = {
-  //   cacheDirectory: path.resolve(
-  //     __dirname,
-  //     '..',
-  //     'node_modules',
-  //     '.cache',
-  //     'storybook',
-  //   ),
-  //   presets: ['@vue/app'],
-  //   babelrc: false,
-  // }
-
   config.resolve.alias = {
     ...config.resolve.alias,
     '@': path.resolve(__dirname, '../src')
