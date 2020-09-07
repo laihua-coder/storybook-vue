@@ -1,4 +1,4 @@
-import MyPage from './Page';
+import MyPage from '@/views/Page';
 import * as HeaderStories from './Header.stories';
 
 export default {
