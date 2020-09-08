@@ -1,7 +1,11 @@
 // use element-ui
 import Vue from "vue";
 import ElementUI from "element-ui";
+
 import { ThemeProvider } from "styled-components";
+// import React from 'react';
+// import { StoryContext, StoryGetter, StoryWrapper } from "@storybook/addons";
+
 Vue.use(ElementUI);
 
 export const parameters = {
@@ -60,6 +64,7 @@ export const globalTypes = {
 /**
  * 一些库要求组件层次结构中较高的组件才能正确呈现。
  * 例如，在样式化组件中，如果您的组件使用主题，则需要ThemeProvider。 添加一个全局装饰器，以将该上下文添加到以下所有故事中
+ * 目前不支持 后续待解决
  */
 // export const decorators = [
 //   (Story) => (

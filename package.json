@@ -18,6 +18,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
     "@storybook/addon-a11y": "^6.0.21",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
@@ -43,6 +45,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "lint-staged": "^10.3.0",
     "node-sass": "^4.12.0",
     "react-is": "^16.13.1",
     "sass-loader": "^8.0.2",
@@ -53,8 +56,18 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
+    "react": "^16.13.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.12",
     "vue-router": "^3.2.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue,ts}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }
